@@ -65,3 +65,28 @@ function handleSubmit(e) {
     console.log({formData})
     console.log({formProps})
   }
+/*trying to add translation to web page*/
+
+  $('[lang="rom"]').hide();
+  $('[lang="fr"]').hide();
+
+$('#lang-switch').change(function () {
+  var lang = $(this).val();
+  switch (lang) {
+    case 'en': 
+      $('[lang]').hide();
+      $('[lang="en"]').show();
+      break;
+    case 'rom':
+      $('[lang]').hide();
+      $('[lang="rom"]').show();
+      break;
+    case 'fr':
+      $('[lang]').hide();
+      $('[lang="fr"]').show();
+      break;
+    default:
+      $('[lang]').hide();
+      $('[lang="en"]').show();
+  }
+});
